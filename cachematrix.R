@@ -52,11 +52,11 @@ cacheSolve <- function(mcm, ...) {
         return (matxInv)
     }
     
-    # If not, get the matrix, calculate its inverse, and store the result
+    # If not, get the matrix, calculate its inverse, and cache the result
     data <- mcm$getMatrix()
     matxInv <- solve(data, ...)
     mcm$setInverse(matxInv)
     
-    # return the calculated inverse
+    # Return the calculated inverse
     matxInv
 }
